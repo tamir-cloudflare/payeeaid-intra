@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayeeAid Intranet — IT Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo" onclick="location.href='index.html'">
+      <div class="logo-icon">P</div>
+      <span class="logo-text">Payee<span>Aid</span> Intranet</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">News</a>
+      <a href="hr.html">HR & Benefits</a>
+      <a href="healthcare.html">Healthcare</a>
+      <a href="it-support.html" class="active">IT Support</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">Home › IT Support</div>
+    <h1>IT Support & Helpdesk</h1>
+    <p>Submit a ticket, check status, or browse self-service guides. Our team responds within 4 business hours.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Quick contact -->
+  <div class="grid-3 mb-24">
+    <div class="info-block">
+      <div class="info-icon info-icon-orange">📞</div>
+      <div>
+        <h4>IT Hotline</h4>
+        <p>+1 (212) 555-0177</p>
+        <p style="font-size: 12px;">Mon–Fri 7am–7pm EST</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-blue">📧</div>
+      <div>
+        <h4>Email Support</h4>
+        <p>it@payeeaid.com</p>
+        <p style="font-size: 12px;">Response within 4 business hours</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-green">🚨</div>
+      <div>
+        <h4>Emergency IT</h4>
+        <p>+1 (212) 555-0199</p>
+        <p style="font-size: 12px;">System outages, security incidents</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+
+    <!-- Ticket form -->
+    <div>
+      <h2 class="section-title">Submit a New Ticket</h2>
+      <div class="card">
+        <form id="ticketForm">
+          <div id="formAlert"></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" id="emp_name" required placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label>Employee Email <span class="req">*</span></label>
+              <input type="email" id="emp_email" required placeholder="jane@payeeaid.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Department <span class="req">*</span></label>
+              <select id="department" required>
+                <option value="">Select…</option>
+                <option>Finance</option>
+                <option>Engineering</option>
+                <option>Sales</option>
+                <option>Marketing</option>
+                <option>Operations</option>
+                <option>HR / People</option>
+                <option>Legal</option>
+                <option>Customer Support</option>
+                <option>Executive</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Office Location</label>
+              <select id="location">
+                <option value="">Select…</option>
+                <option>New York</option>
+                <option>Los Angeles</option>
+                <option>London</option>
+                <option>Munich</option>
+                <option>Dubai</option>
+                <option>Singapore</option>
+                <option>Remote</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Category <span class="req">*</span></label>
+              <select id="category" required>
+                <option value="">Select…</option>
+                <option>Hardware Issue</option>
+                <option>Software / Application</option>
+                <option>Network / VPN / WiFi</option>
+                <option>Email / Communication</option>
+                <option>Account / Access</option>
+                <option>Security Incident</option>
+                <option>New Equipment Request</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Priority <span class="req">*</span></label>
+              <select id="priority" required>
+                <option value="">Select…</option>
+                <option value="Low">Low — Not urgent</option>
+                <option value="Medium">Medium — Affects my work</option>
+                <option value="High">High — Cannot work</option>
+                <option value="Critical">Critical — System down / Security</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Subject <span class="req">*</span></label>
+            <input type="text" id="subject" required placeholder="Brief summary of the issue" maxlength="200">
+          </div>
+
+          <div class="form-group">
+            <label>Description <span class="req">*</span></label>
+            <textarea id="description" required placeholder="Describe the issue in detail. Include error messages, steps to reproduce, and what you were doing when it occurred." rows="5" minlength="10"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            🎫 Submit Ticket
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Ticket list + guides -->
+    <div>
+      <h2 class="section-title">Recent Tickets</h2>
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div id="ticketList">
+          <div style="padding: 40px; text-align: center; color: var(--gray-500); font-size: 14px;">
+            Loading recent tickets…
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title mt-24">Self-Service Guides</h2>
+      <div class="card">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            🔑 How to Reset Your Password
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            🌐 VPN Setup Guide (Windows & Mac)
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            📧 Outlook Configuration Guide
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            🔒 Enable Multi-Factor Authentication
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            🖨️ Connect to Office Printers
+          </a>
+          <a href="#" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; background: var(--gray-50); font-size: 14px; font-weight: 500; color: var(--blue-700);">
+            📱 Set Up Mobile Email Access
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <p>© 2026 PayeeAid Inc. — Internal Employee Portal. For IT issues, visit <a href="it-support.html">IT Support</a>.</p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/tickets.js"></script>
+</body>
+</html>

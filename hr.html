@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayeeAid Intranet — HR & Benefits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo" onclick="location.href='index.html'">
+      <div class="logo-icon">P</div>
+      <span class="logo-text">Payee<span>Aid</span> Intranet</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">News</a>
+      <a href="hr.html" class="active">HR & Benefits</a>
+      <a href="healthcare.html">Healthcare</a>
+      <a href="it-support.html">IT Support</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">Home › HR Rules & Benefits</div>
+    <h1>HR Rules & Benefits</h1>
+    <p>Policies, benefits, leave entitlements, and everything you need to know about working at PayeeAid.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Benefits overview cards -->
+  <h2 class="section-title">Your Benefits at a Glance</h2>
+  <div class="grid-4 mb-24">
+    <div class="card text-center">
+      <div style="font-size: 28px; margin-bottom: 8px;">🏖️</div>
+      <h3>25 Days PTO</h3>
+      <p>Plus public holidays and your birthday off</p>
+    </div>
+    <div class="card text-center">
+      <div style="font-size: 28px; margin-bottom: 8px;">🏥</div>
+      <h3>Full Health Coverage</h3>
+      <p>Medical, dental, vision for you and family</p>
+    </div>
+    <div class="card text-center">
+      <div style="font-size: 28px; margin-bottom: 8px;">💰</div>
+      <h3>401(k) Match</h3>
+      <p>Up to 6% employer match, fully vested in 2 years</p>
+    </div>
+    <div class="card text-center">
+      <div style="font-size: 28px; margin-bottom: 8px;">🎓</div>
+      <h3>Learning Budget</h3>
+      <p>$2,500/year for courses, certifications, conferences</p>
+    </div>
+  </div>
+
+  <!-- Policies accordion -->
+  <h2 class="section-title">Company Policies</h2>
+  <div class="mb-24">
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>📋 Employee Code of Conduct</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>All employees are expected to uphold PayeeAid's values of integrity, transparency, and respect in every interaction.</p>
+        <ul>
+          <li>Professional conduct expected at all times — with colleagues, clients, and vendors</li>
+          <li>Confidentiality of client and company data is mandatory</li>
+          <li>Conflicts of interest must be disclosed to your manager and HR</li>
+          <li>Harassment or discrimination of any kind is strictly prohibited</li>
+          <li>Report violations to hr@payeeaid.com or via the anonymous hotline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>🏖️ Leave & Time Off Policy</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>PayeeAid offers generous leave to support work-life balance:</p>
+        <ul>
+          <li><strong>Annual PTO:</strong> 25 days/year (accrued monthly), carryover up to 5 days</li>
+          <li><strong>Sick Leave:</strong> 10 days/year, no carryover</li>
+          <li><strong>Parental Leave:</strong> 16 weeks paid for primary caregiver, 8 weeks for secondary</li>
+          <li><strong>Bereavement:</strong> 5 days for immediate family, 2 days for extended</li>
+          <li><strong>Public Holidays:</strong> 11 days per local office calendar</li>
+          <li><strong>Birthday:</strong> 1 additional paid day off</li>
+          <li>All leave requests must be submitted via the HR portal with manager approval</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>🏠 Remote & Hybrid Work Policy</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>PayeeAid supports flexible working arrangements:</p>
+        <ul>
+          <li><strong>Hybrid:</strong> Minimum 2 days in office per week for office-based roles</li>
+          <li><strong>Remote:</strong> Fully remote roles must be approved by department head</li>
+          <li><strong>Core hours:</strong> 10am–3pm local time must be available for meetings</li>
+          <li><strong>Equipment:</strong> Company-provided laptop + monitor + headset for all staff</li>
+          <li><strong>Home office stipend:</strong> $100/month for remote employees</li>
+          <li><strong>International remote:</strong> Must comply with local tax and employment laws</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>💰 Compensation & Performance Reviews</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>Annual compensation review cycle:</p>
+        <ul>
+          <li><strong>Performance reviews:</strong> Bi-annually (January and July)</li>
+          <li><strong>Compensation review:</strong> Annually in January, effective February 1</li>
+          <li><strong>Merit increases:</strong> Based on performance rating and budget pool</li>
+          <li><strong>Promotion cycle:</strong> Reviewed in July cycle, effective October 1</li>
+          <li><strong>Bonus:</strong> Annual performance bonus up to 15% of base salary</li>
+          <li><strong>Equity:</strong> RSU grants for eligible roles, 4-year vesting with 1-year cliff</li>
+          <li>Salary bands are published internally on the HR portal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>🎓 Learning & Development</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>Investing in your growth:</p>
+        <ul>
+          <li><strong>Annual budget:</strong> $2,500 per employee for external courses and certifications</li>
+          <li><strong>LinkedIn Learning:</strong> Full access for all employees</li>
+          <li><strong>Internal certifications:</strong> Compliance, security awareness, and product tracks</li>
+          <li><strong>Conference attendance:</strong> Up to 2 conferences/year with manager approval</li>
+          <li><strong>Mentorship program:</strong> Pair with senior leaders for career guidance</li>
+          <li><strong>Internal transfers:</strong> After 12 months in current role, eligible to apply internally</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span>🤝 Grievance & Disciplinary Procedure</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <p>We are committed to a fair and transparent workplace:</p>
+        <ul>
+          <li><strong>Informal resolution:</strong> Encourage direct discussion with your manager first</li>
+          <li><strong>Formal grievance:</strong> Submit in writing to hr@payeeaid.com</li>
+          <li><strong>Investigation:</strong> HR investigates within 5 business days</li>
+          <li><strong>Disciplinary steps:</strong> Verbal warning → Written warning → Final warning → Termination</li>
+          <li><strong>Appeals:</strong> May appeal any decision to the People Operations Director within 10 days</li>
+          <li><strong>Anonymous hotline:</strong> Available 24/7 for sensitive reports</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Emergency contacts -->
+  <h2 class="section-title">Emergency & Key Contacts</h2>
+  <div class="grid-3">
+    <div class="info-block">
+      <div class="info-icon info-icon-orange">🚨</div>
+      <div>
+        <h4>Building Security</h4>
+        <p>+1 (212) 555-0199</p>
+        <p>Available 24/7 for all offices</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-blue">📧</div>
+      <div>
+        <h4>HR General Inquiries</h4>
+        <p>hr@payeeaid.com</p>
+        <p>Response within 1 business day</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-green">📞</div>
+      <div>
+        <h4>Anonymous Hotline</h4>
+        <p>+1 (800) 555-0142</p>
+        <p>Confidential reporting, 24/7</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-purple">🏢</div>
+      <div>
+        <h4>Facilities Management</h4>
+        <p>facilities@payeeaid.com</p>
+        <p>Office access, equipment, mail</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-orange">💼</div>
+      <div>
+        <h4>Payroll Questions</h4>
+        <p>payroll@payeeaid.com</p>
+        <p>Payroll cycle: 1st–15th, 16th–end of month</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-icon info-icon-blue">🌐</div>
+      <div>
+        <h4>IT Helpdesk</h4>
+        <p>it@payeeaid.com</p>
+        <a href="it-support.html">Submit a ticket →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <p>© 2026 PayeeAid Inc. — Internal Employee Portal. For IT issues, visit <a href="it-support.html">IT Support</a>.</p>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
